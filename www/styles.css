@@ -1,0 +1,25 @@
+/* www/styles.css */
+
+/* Ensure all child elements adhere to the container's width */
+aside.sidebar * {
+    max-width: 100%;
+}
+
+aside.sidebar {
+    font-size: 90%;  /* Adjust the percentage as needed */
+}
+
+/* Reduce the font size for header elements (h1 to h5) inside the sidebar */
+aside.sidebar h4,
+aside.sidebar h5 {
+    font-size: 90%;  /* Adjust this value as needed */
+}
+
+.card-header-priori {
+    color: white;
+    background: red;
+}
+.card-header-inferencia {
+    color: white;
+    background: Blue;
+}
