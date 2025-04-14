@@ -13,7 +13,7 @@ app_ui = ui.page_fluid(
     ui.tags.head(
         ui.tags.link(rel="stylesheet", href="styles.css")
     ),
-    ui.panel_title("Inferência Bayesiana: priori, verossimilhança e posteriori"),
+    ui.panel_title("Inferência Bayesiana Binomial"),
     ui.layout_sidebar(
         ui.sidebar(
             ui.card(
