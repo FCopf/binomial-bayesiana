@@ -88,7 +88,7 @@ def server(input, output, session):
             if x1 <= x2:
                 axs[0].fill_between(p_grid, prior, where=((p_grid >= x1) & (p_grid <= x2)), color='red', alpha=0.2)
                 prior_prob = beta.cdf(x2, a=alpha_param, b=beta_param) - beta.cdf(x1, a=alpha_param, b=beta_param)
-                axs[0].set_title(f"Priori Beta - P({x1:.2f} ≤ p ≤ {x2:.2f}) = {prior_prob:.2f}")
+                axs[0].set_title(f"Priori Beta - P({x1:.2f} ≤ p ≤ {x2:.2f}) = {prior_prob:.3f}")
             else:
                 axs[0].set_title("Priori Beta")
             axs[0].set_ylabel("Densidade")
@@ -105,7 +105,7 @@ def server(input, output, session):
             if x1 <= x2:
                 axs[2].fill_between(p_grid, posterior, where=((p_grid >= x1) & (p_grid <= x2)), color='blue', alpha=0.2)
                 post_prob = beta.cdf(x2, a=alpha_param + k, b=beta_param + N - k) - beta.cdf(x1, a=alpha_param + k, b=beta_param + N - k)
-                axs[2].set_title(f"Posteriori (Priori × Verossimilhança) - P({x1:.2f} ≤ p ≤ {x2:.2f}) = {post_prob:.2f}")
+                axs[2].set_title(f"Posteriori (Priori × Verossimilhança) - P({x1:.2f} ≤ p ≤ {x2:.2f}) = {post_prob:.3f}")
             else:
                 axs[2].set_title("Posteriori (Priori × Verossimilhança)")
             axs[2].set_xlabel("p (taxa de sucesso)")
